@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Adăugăm FontAwesome -->
+    <link href="~/styles/mens.css" rel="stylesheet" />
+</head>
+<body style="background-color: #FFFAFA;">
+    
+    <!-- Bara de căutare -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
+
+    <!-- Bara cu gamele de produse -->
+    <aside class="product-categories">
+        <h2>Product Categories</h2>
+        <ul>
+            <li><a href="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a asp-controller="Home" asp-action="Shoes">Shoes</a></li>
+            <!-- Adaugă și alte categorii aici -->
+        </ul>
+    </aside>
+</body>
+</html>

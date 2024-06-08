@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes</title>
+    <link href="~/styles/shoes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Adăugăm FontAwesome -->
+</head>
+<body style="background-color: #FFFAFA;">
+    <!-- Bara de căutare -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
+
+    <!-- Bara cu produse scrollabile -->
+    <div class="product-scroll">
+        <div class="product">
+            <img src="shoes/shoe1.jpg" alt="Shoe 1">
+            <h3>Shoe Name 1</h3>
+            <p>Description of Shoe 1.</p>
+            <button onclick="showProductDetails('shoe1')">View Details</button>
+            <button class="favorite-btn" onclick="addToCart('shoe1')"><i class="fas fa-heart"></i></button> <!-- Adăugăm inima FontAwesome și gestionăm acțiunea de adăugare a produsului în coș -->
+        </div>
+        <!-- Adăugă mai multe produse aici -->
+        <div class="product">
+            <img src="shoes/shoe2.jpg" alt="Shoe 2">
+            <h3>Shoe Name 2</h3>
+            <p>Description of Shoe 2.</p>
+            <button onclick="showProductDetails('shoe2')">View Details</button>
+            <button class="favorite-btn" onclick="addToCart('shoe2')"><i class="fas fa-heart"></i></button>
+        </div>
+        <div class="product">
+            <img src="shoes/shoe3.jpg" alt="Shoe 3">
+            <h3>Shoe Name 3</h3>
+            <p>Description of Shoe 3.</p>
+            <button onclick="showProductDetails('shoe3')">View Details</button>
+            <button class="favorite-btn" onclick="addToCart('shoe3')"><i class="fas fa-heart"></i></button>
+        </div>
+    </div>
+    <!-- Script pentru afișarea detaliilor produsului -->
+    <script>
+        function showProductDetails(productId) {
+            // Aici poți adăuga cod pentru afișarea detaliilor produsului într-un mod specific
+            alert("Detalii despre produsul " + productId);
+        }
+        
+        // Funcția pentru adăugarea produselor în coș
+        function addToCart(productId) {
+            // Obținem lista de produse din localStorage
+            let cartItems = localStorage.getItem('cartItems');
+            console.log(cartItems);
+
+            // Verificăm dacă lista există deja în localStorage
+            if (cartItems) {
+                // Dacă lista există, convertim lista din format JSON înapoi într-un obiect JavaScript
+                cartItems = JSON.parse(cartItems);
+            } else {
+                // Dacă lista nu există, inițializăm o listă goală
+                cartItems = [];
+            }
+
+            // Adăugăm produsul în lista de produse
+            cartItems.push(productId);
+
+            // Actualizăm lista de produse în localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Afișăm un mesaj de confirmare că produsul a fost adăugat în coș
+            alert("Produsul " + productId + " a fost adăugat în coșul de cumpărături!");
+
+            // Redirecționăm utilizatorul către pagina cart.html
+            window.location.href = "Cart";
+        }
+    </script>
+</body>
+</html>
+

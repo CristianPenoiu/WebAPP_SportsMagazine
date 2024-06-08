@@ -1,0 +1,31 @@
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Articole Sportive</title>
+    <link href="c:\users\cristi\desktop\an3_lab_sem2\webapplication1\webapplication1\wwwroot\styles\styles.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url("https://www.globality-health.com/wp-content/uploads/2020/08/AdobeStock_286933595-Blog-Sport1-2000x936.jpeg");
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Adăugăm FontAwesome -->
+</head>
+<body>
+    <section id="home" class="section" style="text-align: right;">
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="alert alert-success">@successMessage</div>
+        }
+
+        <h1>Welcome to our Sports Articles Website</h1>
+        <p>Here you can find the latest sports articles and shop for sports gear.</p>
+    </section>
+</body>
+</html>

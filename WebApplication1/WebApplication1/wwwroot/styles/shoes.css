@@ -1,0 +1,43 @@
+/* Afișare a trei chenare de produse pe linie */
+.product-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: calc(33.33% - 40px); /* Lățimea calculată pentru a se încadra trei pe linie */
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+/* Stilizare pentru bara de căutare */
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}

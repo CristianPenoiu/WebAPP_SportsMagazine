@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/abouts/about-4/assets/css/about-4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Adăugăm FontAwesome -->
+    <link href="~/styles/styles.css" rel="stylesheet" />
+    <link href="~/styles/about-us.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Reviews - Bootstrap Brain Component -->
+    <section class="py-3 py-md-5 py-xl-8">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <h3 class="fs-5 mb-2 text-secondary text-uppercase">Reviews</h3>
+                    <h2 class="display-5 mb-4">Explorează recenziile noastre și împărtășește-ți experiența!</h2>
+                    <!-- Butonul de contact -->
+                    <button type="button" class="btn btn-lg btn-primary mb-3 mb-md-4 mb-xl-5" onclick="openContactForm()">Contactează-ne</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row gy-3 gy-md-4 gy-lg-0">
+                <div class="col-12 col-lg-6">
+                    <div class="card bg-light p-3 m-0">
+                        <div class="row gy-3 gy-md-0 align-items-md-center">
+                            <div class="col-md-5">
+                                <img src="./assets/img/about-img-2.jpg" class="img-fluid rounded-start" alt="Why Choose Us?">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-0">
+                                    <h2 class="card-title h4 mb-3">Experiența clienților noștri</h2>
+                                    <p class="card-text lead">Descoperă poveștile clienților noștri și află cum i-au impresionat produsele și serviciile noastre.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card bg-light p-3 m-0">
+                        <div class="row gy-3 gy-md-0 align-items-md-center">
+                            <div class="col-md-5">
+                                <img src="./assets/img/about-img-1.jpg" class="img-fluid rounded-start" alt="Visionary Team">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-0">
+                                    <h2 class="card-title h4 mb-3">Împărtășește-ți experiența</h2>
+                                    <p class="card-text lead">Ne pasă de feedback-ul tău! Dacă ai o experiență de împărtășit, nu ezita să ne contactezi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <h2>Spune-ne despre expeienta ta cu noi</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nume:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Trimite</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/scripts/about-us.js"></script>
+    <footer>
+        <a href="privacy-agreement.html" style="margin-right: 60px;">Acord de Confidențialitate</a>
+    </footer>
+</body>
+</html>
+

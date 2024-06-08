@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\AboutUs.cshtml" />
+    <Content Remove="Views\Cart.cshtml" />
+    <Content Remove="Views\home.cshtml" />
+    <Content Remove="Views\map.cshtml" />
+    <Content Remove="Views\mens.cshtml" />
+    <Content Remove="Views\pants.cshtml" />
+    <Content Remove="Views\privacy-agreement.cshtml" />
+    <Content Remove="Views\product-page.cshtml" />
+    <Content Remove="Views\shirts.cshtml" />
+    <Content Remove="Views\shoes.cshtml" />
+    <Content Remove="Views\user-page.cshtml" />
+    <Content Remove="Views\women.cshtml" />
+    <Content Remove="wwwroot\scripts\user.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\scripts\user.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\AboutUs.cshtml" />
+    <None Include="Views\Home\Cart.cshtml" />
+    <None Include="Views\Home\Home.cshtml" />
+    <None Include="Views\Home\Map.cshtml" />
+    <None Include="Views\Home\Mens.cshtml" />
+    <None Include="Views\Home\Pants.cshtml" />
+    <None Include="Views\Home\PrivacyAgreement.cshtml" />
+    <None Include="Views\Home\ProductPage.cshtml" />
+    <None Include="Views\Home\Shirts.cshtml" />
+    <None Include="Views\Home\Shoes.cshtml" />
+    <None Include="Views\Home\UserPage.cshtml" />
+    <None Include="Views\Home\Women.cshtml" />
+    <None Include="wwwroot\scripts\user.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>

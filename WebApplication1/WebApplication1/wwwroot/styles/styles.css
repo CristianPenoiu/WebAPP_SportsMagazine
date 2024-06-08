@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Alinează elementele pe verticală */
+    }
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Alinează elementele pe verticală */
+    margin-right: 20px; /* Spațiere la dreapta */
+}
+
+    .nav-links a, .nav-links form {
+        margin-right: 20px; /* Asigură un spațiu consistent între link-uri */
+        color: #fff; /* Setează culoarea textului la alb */
+        text-decoration: none; /* Elimină sublinierea */
+    }
+
+    .nav-links button {
+        background-color: transparent; /* Elimină culoarea de fundal a butoanelor */
+        border: none; /* Elimină bordurile butoanelor */
+        color: #fff; /* Textul butonului să fie alb */
+        cursor: pointer; /* Cursor pointer pentru butoane */
+    }
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Stilizarea suplimentară necesară pentru footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Stilizare pentru imagini și produse */
+img {
+    margin-left: 20px;
+    width: 200px; /* Ajustează lățimea după necesități */
+}
+
+.product {
+    display: inline-block;
+    margin: 20px;
+}
+
+.section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 85%;
+    color: white;
+    padding-top: 100px;
+}
+.nav-links a img.cart-icon {
+    width: 20px; /* Setează lățimea specifică pentru icoana coșului */
+    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+    filter: brightness(0) invert(1); /* Schimbă culoarea în alb */
+}

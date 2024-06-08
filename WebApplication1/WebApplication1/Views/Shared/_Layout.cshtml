@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <link href="~/styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a asp-controller="Home" asp-action="Home"><img src="~/img/logo.png" /></a>
+            <h1 style="font-style: italic;">Strive for greatness</h1>
+            <div class="nav-links">
+                <a asp-controller="Home" asp-action="Home">Home</a>
+                <a asp-controller="Home" asp-action="Women">Womens</a>
+                <a asp-controller="Home" asp-action="Mens">Mens</a>
+                <a asp-controller="Home" asp-action="AboutUs">About Us</a>
+                <a asp-controller="Home" asp-action="Recenzii">Recenzii</a>
+                <a asp-controller="Home" asp-action="UserPage">Account</a>
+                <a asp-controller="AppRoles" asp-action="Index">Roles</a>
+                <a asp-controller="Inregistrare" asp-action="Index">Inregistrare</a>
+                <a asp-controller="Home" asp-action="Cart"><img src="~/img/cart-icon.png" class="cart-icon" alt="Cart"></a>
+            </div>
+            <partial name="_LoginPartial" />
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <a asp-controller="Home" asp-action="PrivacyAgreement" style="margin-right: 60px;">Privacy Agreement</a>
+        <!--Google map-->
+        <a asp-controller="Home" asp-action="Map" style="margin-left: 200px;">Map</a>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

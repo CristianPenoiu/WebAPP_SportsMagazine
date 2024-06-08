@@ -1,0 +1,59 @@
+/* Stilizare pentru bara de căutare */
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Stilizare pentru coloana cu gamele de produse */
+.product-categories {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.product-categories h2 {
+    margin-bottom: 10px;
+}
+
+.product-categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-categories li {
+    margin-bottom: 10px;
+}
+
+.product-categories a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.product-categories a:hover {
+    color: #4CAF50;
+}
